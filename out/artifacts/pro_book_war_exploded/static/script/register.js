@@ -69,7 +69,7 @@ function createXMLHttpRequest(){
 
 function ckUname(uname){
     createXMLHttpRequest();
-    var url = "/pro05_book_ssm_war_exploded/register/"+uname ;
+    var url = "/pro_book_war_exploded/register/"+uname ;
     xmlHttpRequest.open("GET",url,true);
     //设置回调函数
     xmlHttpRequest.onreadystatechange = ckUnameCB ;

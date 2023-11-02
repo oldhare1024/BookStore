@@ -12,8 +12,7 @@ public class OrderBean {
     private Integer orderStatus;
     private List<OrderItem> orderItemList;
 
-    public OrderBean() {
-    }
+    public OrderBean() {}
 
     public OrderBean(Integer oid) {
         this.oid = oid;

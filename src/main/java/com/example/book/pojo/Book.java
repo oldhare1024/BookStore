@@ -10,7 +10,6 @@ public class Book {
     private Integer bookCount;
     private Integer bookStatus=0;
     public Book(){
-
     }
 
     public Book(Integer bid) {
