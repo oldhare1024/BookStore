@@ -10,6 +10,12 @@ public class CartItem {
 
     }
 
+    public CartItem(Book book, Integer buyCount, User userBean) {
+        this.book = book;
+        this.buyCount = buyCount;
+        this.userBean = userBean;
+    }
+
     public CartItem(Integer cid) {
         this.cid = cid;
     }
