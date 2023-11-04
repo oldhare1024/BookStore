@@ -1,11 +1,14 @@
 package com.example.book.pojo;
 
+import java.util.List;
+
 public class User {
     private Integer uid;
     private String uname;
     private String pwd;
     private String email;
     private Integer role;
+    private List<OrderBean> orderList;
     private Cart cart;
 
     public User() {
@@ -61,5 +64,13 @@ public class User {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public List<OrderBean> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<OrderBean> orderList) {
+        this.orderList = orderList;
     }
 }

@@ -21,7 +21,7 @@
         </div>
         <div class="header-right">
             <h3>欢迎<span th:text="${session.currUser.uname}">蒋总</span>光临Rabb1t书城</h3>
-            <div class="order"><a th:href="@{/order}">我的订单</a></div>
+            <div class="order"><a th:href="@{/order.do(operate='getOrderList')}">我的订单</a></div>
             <div class="destory"><a th:href="@{/login}">注销</a></div>
             <div class="gohome">
                 <a th:href="@{/index}">返回</a>

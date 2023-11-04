@@ -9,6 +9,7 @@ import com.example.book.pojo.OrderItem;
 import com.example.book.pojo.User;
 import com.example.book.service.OrderService;
 
+import java.util.List;
 import java.util.Map;
 
 public class OrderServiceImpl implements OrderService {
@@ -30,5 +31,15 @@ public class OrderServiceImpl implements OrderService {
         for(CartItem cartItem:cartItemMap.values()){
             cartItemDAO.delCartItem(cartItem);
         }
+    }
+
+    @Override
+    public List<OrderBean> getOrderList(User user) {
+        List<OrderBean> orderBeanList= orderDAO.getOrderList(user);
+        for(OrderBean orderBean:orderBeanList){
+           Integer totalBookCount =orderDAO.getOrderTotalBookCount(orderBean);
+            orderBean.setTotalBookCount(totalBookCount);
+        }
+        return orderBeanList;
     }
 }

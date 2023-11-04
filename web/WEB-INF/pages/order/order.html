@@ -43,7 +43,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr th:each="order:${session.user.orderList}">
+            <tr th:each="order:${session.currUser.orderList}">
               <td th:text="${order.orderNo}">12354456895</td>
               <td th:text="${order.orderDate}">2023.04.23</td>
               <td th:text="${order.orderMoney}">90.00</td>
