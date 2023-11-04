@@ -9,7 +9,8 @@
     <link rel="stylesheet" th:href="@{/static/css/cart.css}"/>
     <!--    <script language="JavaScript" th:src="@{static/script/vue.js}"></script>-->
     <!--    <script language="JavaScript" th:src="@{static/script/axios.min.js}"></script>-->
-    <!--    <script language="JavaScript" th:src="@{/static/script/cart.js}"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script language="JavaScript" th:src="@{/static/script/cart.js}"></script>
 </head>
 <body>
 <div class="header">
@@ -51,12 +52,12 @@
                 </td>
                 <td th:text="${cartItem.book.bookName}">活着</td>
                 <td>
-                    <span class="count">-</span>
+                    <span class="count" th:onclick="|editCart(${cartItem.cid},${cartItem.buyCount-1})|">-</span>
                     <input class="count-num" type="text" value="1" th:value="${cartItem.buyCount}"/>
-                    <span class="count">+</span>
+                    <span class="count" th:onclick="|editCart(${cartItem.cid},${cartItem.buyCount+1})|">+</span>
                 </td>
                 <td th:text="${cartItem.book.price}">36.8</td>
-                <td th:text="${cartItem.book.price * cartItem.buyCount}">36.8</td>
+                <td th:text="${cartItem.xj}">36.8</td>
                 <td><a href="">删除</a></td>
             </tr>
             </tbody>
