@@ -15,4 +15,10 @@ public class UserServiceImpl implements UserService {
     public void regist(User user) {
         userDAO.addUser(user);
     }
+
+    @Override
+    public User getUser(String uname) {
+        return userDAO.getUser(uname);
+    }
 }
+

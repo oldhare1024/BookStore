@@ -6,6 +6,7 @@
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/pages/cart/cart.html" value="file://$PROJECT_DIR$/web/WEB-INF/pages/cart" />
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/pages/index.html" value="file://$PROJECT_DIR$/web/WEB-INF/pages" />
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/pages/user/login.html" value="file://$PROJECT_DIR$/web/WEB-INF/pages/user" />
+        <entry key="file://$PROJECT_DIR$/web/WEB-INF/pages/user/regist.html" value="file://$PROJECT_DIR$/web/WEB-INF/pages/user" />
       </map>
     </option>
   </component>

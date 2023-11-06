@@ -18,7 +18,7 @@ function preRegist(){
     //密码的长度至少为8位
     var pwdTxt = $("pwdTxt");
     var pwd = pwdTxt.value ;
-    var pwdReg = /[\w]{8,}/; // /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,}$/;
+    var pwdReg = /\w{8,}/;
     var pwdSpan = $("pwdSpan");
     if(!pwdReg.test(pwd)){
         pwdSpan.style.visibility="visible";
@@ -51,6 +51,7 @@ function preRegist(){
     return true ;
 }
 
+/*
 //如果想要发送异步请求，我们需要一个关键的对象 XMLHttpRequest
 var xmlHttpRequest ;
 
@@ -69,7 +70,7 @@ function createXMLHttpRequest(){
 
 function ckUname(uname){
     createXMLHttpRequest();
-    var url = "/pro_book_war_exploded/register/"+uname ;
+    var url = "user.do?operate=ckUname&uname="+uname ;
     xmlHttpRequest.open("GET",url,true);
     //设置回调函数
     xmlHttpRequest.onreadystatechange = ckUnameCB ;
@@ -78,17 +79,17 @@ function ckUname(uname){
 }
 
 function ckUnameCB(){
-    if(xmlHttpRequest.readyState==4 && xmlHttpRequest.status==200){
+    if(xmlHttpRequest.readyState===4 && xmlHttpRequest.status===200){
         //xmlHttpRequest.responseText 表示 服务器端响应给我的文本内容
         //alert(xmlHttpRequest.responseText);
         var responseText = xmlHttpRequest.responseText ;
         // {'uname':'1'}
         //alert(responseText);
-        if(responseText=="1"){
+        if(responseText==="1"){
             alert("用户名已经被注册！");
         }else{
             alert("用户名可以注册！");
         }
     }
 }
-
+*/

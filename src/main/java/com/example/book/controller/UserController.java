@@ -33,11 +33,21 @@ public class UserController {
             response.setCharacterEncoding("utf-8");
             response.setContentType("text/html;charset=utf-8");
             PrintWriter out = response.getWriter();
-            out.println("<script language='javascript'>alert('验证码不正确!');window.location.href='page.do?operate=page&page=user/regist';</script>");
-            return null;
+            //out.println("<script language='javascript'>alert('验证码不正确!');window.location.href='page.do?operate=page&page=user/regist';</script>");
+            out.println("<script language='javascript'>alert('验证码不正确!');</script>");
+            return "user/regist";
         } else {
             userService.regist(new User(uname, pwd, email, 0));
             return "user/login";
+        }
+    }
+
+    public String ckUname(String uname) {
+        User user = userService.getUser(uname);
+        if (user != null) {//用户名被占用
+            return "json:{'uname':'1'}";
+        } else {//用户名可以注册
+            return "json:{'uname':'0'}";
         }
     }
 }
