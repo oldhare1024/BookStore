@@ -51,7 +51,7 @@ function preRegist(){
     return true ;
 }
 
-/*
+
 //如果想要发送异步请求，我们需要一个关键的对象 XMLHttpRequest
 var xmlHttpRequest ;
 
@@ -85,11 +85,11 @@ function ckUnameCB(){
         var responseText = xmlHttpRequest.responseText ;
         // {'uname':'1'}
         //alert(responseText);
-        if(responseText==="1"){
+        if (responseText === "{'uname':'1'}") {
             alert("用户名已经被注册！");
         }else{
             alert("用户名可以注册！");
         }
     }
 }
-*/
+

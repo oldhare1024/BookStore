@@ -1,8 +1,8 @@
 package com.example.book.dao.impl;
 
-import com.atguigu.myssm.basedao.BaseDAO;
 import com.example.book.dao.UserDAO;
 import com.example.book.pojo.User;
+import com.example.myssm.basedao.BaseDAO;
 
 public class UserDaoImpl extends BaseDAO<User> implements UserDAO {
     public User getUser(String uname, String pwd) {
